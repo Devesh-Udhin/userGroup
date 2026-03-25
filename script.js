@@ -1,5 +1,5 @@
 console.log("Script loaded successfully 2.");
-var accessToken;
+const ACCESS_TOKEN = "REPLACE_ME_SECRET_TOKEN";
 fetch(
     "https://curious-narwhal-u48v91-dev-ed.trailblaze.my.salesforce.com/services/oauth2/lightningoutsingleaccess",
     {
@@ -7,7 +7,7 @@ fetch(
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "access_token=00DQy00000oVk3T!AQEAQLwLlNh4cQRNGZbPLVygQzt29xep6NnMLtiw6HlZo_YS0rcRif6rNd6HQb23OEcTdypEiCDTBkXkZ86HgqjZBCw74fcy&lightning_out_app_id=1UsQy0000000GzFKAU"
+        body: `access_token=${ACCESS_TOKEN}&lightning_out_app_id=1UsQy0000000GzFKAU`
     }
 )
     .then((response) => {

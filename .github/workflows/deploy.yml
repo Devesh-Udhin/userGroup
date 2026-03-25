@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-proxy: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject Secret into Code
+        run: |
+          # This replaces the placeholder text with the actual secret
+          sed -i "s/REPLACE_ME_SECRET_TOKEN/${{ secrets.SF_TOKEN }}/g" script.js
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # The folder where your files are
+          branch: gh-pages
