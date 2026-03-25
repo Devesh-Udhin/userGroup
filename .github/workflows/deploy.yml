@@ -14,7 +14,7 @@ jobs:
       - name: Inject Secret into Code
         run: |
           # This replaces the placeholder text with the actual secret
-          sed -i "s/REPLACE_ME_SECRET_TOKEN/${{ secrets.SF_TOKEN }}/g" script.js
+          sed -i "s/REPLACE_ME_SECRET_TOKEN/${{ secrets.SF_ACCESS_TOKEN }}/g" script.js
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
