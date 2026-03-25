@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Host page context-->
+<body>
+    <!--Lightning Out 2.0 JS library -->
+    <script
+        type="text/javascript"
+        async=""
+        src="https://curious-narwhal-u48v91-dev-ed.trailblaze.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"
+    ></script>
+    <!-- Lightning Out 2.0 web component: base configuration -->
+    <lightning-out-application
+        frontdoor-url="https://curious-narwhal-u48v91-dev-ed.trailblaze.my.salesforce.com/secur/frontdoor.jsp?..."
+        components="c-user-group-lwc">
+    </lightning-out-application>
+    <!-- Lightning Out 2.0 web component with optional styling hooks -->
+    <c-my-lwc style="--custom-color: brown;">
+        <!-- shadow DOM begin -->
+        <iframe>
+            <html>
+                <!-- Salesforce context -->
+                <body>
+                    <!-- Lightning web component -->
+                    <c-my-lwc style="--custom-color: brown;"></c-my-lwc>
+                </body>
+            </html>
+        </iframe>
+        <!-- shadow DOM end -->
+    </c-my-lwc>
+</body>
+</html>
