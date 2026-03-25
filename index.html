@@ -16,21 +16,22 @@
     <!-- Lightning Out 2.0 web component: base configuration -->
     <lightning-out-application
         frontdoor-url="https://curious-narwhal-u48v91-dev-ed.trailblaze.my.salesforce.com/secur/frontdoor.jsp?..."
-        components="c-user-group-lwc">
-    </lightning-out-application>
+        app-id="1UsQy0000000GzFKAU"
+        components="c-user-group"
+    ></lightning-out-application>
     <!-- Lightning Out 2.0 web component with optional styling hooks -->
-    <c-my-lwc style="--custom-color: brown;">
+    <c-user-group style="--custom-color: brown;">
         <!-- shadow DOM begin -->
         <iframe>
             <html>
                 <!-- Salesforce context -->
                 <body>
                     <!-- Lightning web component -->
-                    <c-my-lwc style="--custom-color: brown;"></c-my-lwc>
+                    <c-user-group style="--custom-color: brown;"></c-user-group>
                 </body>
             </html>
         </iframe>
         <!-- shadow DOM end -->
-    </c-my-lwc>
+    </c-user-group>
 </body>
 </html>
